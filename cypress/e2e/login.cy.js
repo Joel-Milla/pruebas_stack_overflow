@@ -1,25 +1,11 @@
-//Commands
+const e = "wapzul@dunkos.xyz";
 
-Cypress.Commands.add("LoginAPI", () => {
-  cy.request("POST", "https://rahulshettyacademy.com/api/ecom/auth/login", {
-    userEmail: "mail@gmail.com",
-    userPassword: "psw",
-  }).then(function (resp) {
-    expect(resp.status).to.eq(200);
-    Cypress.env("token", resp.body.token);
-  });
-});
-//Login example
-describe("JWT Session", () => {
-  it("is logged", () => {
-    cy.LoginAPI().then(() => {
-      cy.visit("https://rahulshettyacademy.com/client", {
-        onBeforeLoad: function (window) {
-          window.localStorage.setItem("token", Cypress.env("token"));
-        },
-      });
-    });
-
-    cy.get(".card-body button:last-of-type").eq(1).click();
+describe("Sign In Test", () => {
+  it("log int to an account", () => {
+    cy.visit("https://www.codeproject.com/");
+    cy.get('[data-micromodal-trigger="modal-1"]').click();
+    cy.get("#Email").type(e);
+    cy.get("#Password").type(e);
+    cy.get(".signin").click();
   });
 });
