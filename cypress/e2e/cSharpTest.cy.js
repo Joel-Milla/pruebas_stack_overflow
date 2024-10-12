@@ -7,9 +7,7 @@ describe('StackOverflow API Test for .NET Core Search', () => {
 
           expect(response.body.items.length).to.be.greaterThan(0);
   
-
           cy.log(`Number of results: ${response.body.items.length}`);
-  
   
           response.body.items.forEach((item, index) => {
             cy.log(`Result ${index + 1}: ${item.title}`);
