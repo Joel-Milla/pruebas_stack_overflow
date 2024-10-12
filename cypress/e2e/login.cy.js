@@ -1,4 +1,4 @@
-const e = "wapzul@dunkos.xyz";
+const e = "nru37504@inohm.com";
 
 describe("Sign In Test", () => {
   it("log int to an account", () => {
