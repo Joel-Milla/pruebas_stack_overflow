@@ -1,0 +1,13 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+
+# Cypress test files and folders
+cypress/screenshots/
+cypress/videos/
+
+# Cypress config cache
+.cypress_cache/
+
+# Environment variables
+.env
